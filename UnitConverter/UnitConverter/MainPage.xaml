@@ -1,0 +1,94 @@
+﻿<Page
+    x:Class="UnitConverter.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UnitConverter"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    >
+
+    <Grid x:Name="LayoutRoot"
+          Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel x:Name="TitlePanel"
+                    Grid.Row="0"
+                    Margin="10,17,10,28">
+            <TextBlock x:Name="ApplicationTitle"
+                       Text="UNITS CONVERTER"
+                       FontSize="40" Foreground="CadetBlue"/>
+            <TextBlock x:Name="PageTitle"
+                       Text="temperature"
+                       Margin="0,0,0,0"
+                       FontSize="20" />
+        </StackPanel>
+        <Grid x:Name="ContentPanel"
+              Grid.Row="1"
+              Margin="12,0">
+            <TextBox Height="72"
+                     Margin="0,43,0,0"
+                     Width="438"
+                     HorizontalAlignment="Left"
+                     InputScope="Number"
+                     Name="textBox1"
+                     Text=""
+                     VerticalAlignment="Top" Foreground="CadetBlue" FontSize="32"
+                     />
+                     <!--GotFocus="Value1_GotFocus"-->
+                      
+            <TextBlock Height="30"
+                       Margin="0,15,0,0"
+                       Width="413"
+                       HorizontalAlignment="Left"
+                       Name="textBlock1"
+                       Text="fahrenheit"
+                       VerticalAlignment="Top" FontSize="20" />
+            <TextBox Height="72"
+                     Margin="0,177,0,0"
+                     Width="438"
+                     HorizontalAlignment="Left"
+                     InputScope="Number"
+                     Name="textBox2"
+                     Text=""
+                     VerticalAlignment="Top" FontSize="32" Foreground="CadetBlue"
+                     
+                      />
+                    <!--GotFocus="Value2_GotFocus"-->
+            <TextBlock Height="30"
+                       Margin="0,145,0,0"
+                       HorizontalAlignment="Left"
+                       Name="textBlock2"
+                       Text="celsius"
+                       VerticalAlignment="Top" FontSize="20" />
+        </Grid>
+
+    </Grid>
+
+    <Page.BottomAppBar>
+        <CommandBar IsSticky="True" x:Name="appBar" Background="CadetBlue" Foreground="Black">
+            <CommandBar.PrimaryCommands>
+                <AppBarButton x:Name="icon1"  IsCompact="False" Label="Convert" Background="Beige" >
+                    <!--Click="Convert-Click"-->
+                <AppBarButton.Icon>
+                        <BitmapIcon UriSource="ms-appx:///Assets/Images/appbar.sync.rest.png"/>
+                </AppBarButton.Icon>
+                </AppBarButton>
+                
+            </CommandBar.PrimaryCommands>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Label="temperature"/>
+                <AppBarButton Label="teaspoon/tablespoon"/>
+                <AppBarButton Label="about units converter"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+
+</Page>
